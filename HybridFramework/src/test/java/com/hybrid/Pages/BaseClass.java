@@ -31,6 +31,7 @@ public class BaseClass {
 	public ExtentReports extentreport;
 	public ExtentTest logger;
 
+	//This is a setup suit which initialize to Browser ans launch the application URl before Suit
 	@BeforeSuite
 	public void SetupSuit() throws FileNotFoundException {
 		
