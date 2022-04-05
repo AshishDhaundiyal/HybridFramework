@@ -5,6 +5,10 @@
 	<groupId>HybridFramework</groupId>
 	<artifactId>HybridFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
 
 	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependencies>
@@ -44,5 +48,25 @@
 
 
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M6</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>XmlFiles/${xmlFiles}</suiteXmlFile>
+					</suiteXmlFiles>
+					
+					<systemPropertyVariables>
+					<browserName>${browser}</browserName>
+					<appURL>${appUrl}</appURL>
+					
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
 

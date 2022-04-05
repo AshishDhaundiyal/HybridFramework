@@ -15,12 +15,12 @@ public class helper {
 
 	// to handle the screenshot , frames, windows, sync issues, JS executers
 
-	public static String captureScreenshots(WebDriver driver) {
+	public static String captureScreenshots(WebDriver driver ) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String screenshotPath = System.getProperty("user.dir"+"/Screenshots/"+getCurrentDateTime() +" Login.png");
+		String screenshotPath = (System.getProperty("user.dir")+"\\Screenshots\\"+getCurrentDateTime() +" Login.png");
 		
 		try {
-			FileHandler.copy(src, new File("./Screenshots/"+getCurrentDateTime() +" Login.png"));
+			FileHandler.copy(src, new File(screenshotPath));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Cannot take screenshot" + e.getMessage());

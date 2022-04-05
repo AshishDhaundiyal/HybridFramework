@@ -12,12 +12,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.beust.jcommander.Parameter;
 import com.hybrid.Utilities.BrowserFactory;
 import com.hybrid.Utilities.ConfigDataProviders;
 import com.hybrid.Utilities.ExcelDataProviders;
@@ -46,10 +48,13 @@ public class BaseClass {
 		Reporter.log("Settingup  completed", true);
 	}
 
+	@Parameters({"browser","appUrl"})
 	@BeforeClass
-	public void setup() {
+	public void setup(String browser, String url) {
 		Reporter.log("Browser initiated", true);
-		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.geturl());
+		//driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.geturl());
+		
+		driver = BrowserFactory.startApplication(driver, browser, url);
 		Reporter.log("Browser initiated", true);
 	}
 
@@ -60,21 +65,23 @@ public class BaseClass {
 	}
 
 	@AfterMethod
-	public void teardownMethod(ITestResult result, String screenshotPath) throws IOException {
+	public void teardownMethod(ITestResult result) throws IOException {
 
-		if (result.getStatus() == ITestResult.FAILURE) {
-
-			logger.fail("Test Failed",
-					MediaEntityBuilder.createScreenCaptureFromPath(helper.captureScreenshots(driver)).build());
-
-		}
 		if (result.getStatus() == ITestResult.SUCCESS) {
 
 			logger.pass("Test PASSED",
 					MediaEntityBuilder.createScreenCaptureFromPath(helper.captureScreenshots(driver)).build());
 
 		}
-		if (result.getStatus() == ITestResult.SKIP) {
+		
+		else if (result.getStatus() == ITestResult.FAILURE) {
+
+			logger.fail("Test Failed",
+					MediaEntityBuilder.createScreenCaptureFromPath(helper.captureScreenshots(driver)).build());
+
+		}
+		
+		else if (result.getStatus() == ITestResult.SKIP) {
 
 			logger.skip("Test SKIPPED",
 					MediaEntityBuilder.createScreenCaptureFromPath(helper.captureScreenshots(driver)).build());

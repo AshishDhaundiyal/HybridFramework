@@ -1,37 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Settingup the Browser]]>
+    </line>
+    <line>
+      <![CDATA[Settingup  completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser initiated]]>
+    </line>
+    <line>
+      <![CDATA[Browser initiated]]>
+    </line>
+    <line>
+      <![CDATA[user login failed]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot taken and attached to the report]]>
+    </line>
+    <line>
+      <![CDATA[Browser Closed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-03-31T15:53:22Z" name="Default suite" finished-at="2022-03-31T15:53:33Z" duration-ms="11494">
+  <suite started-at="2022-04-04T11:40:16Z" name="Default suite" finished-at="2022-04-04T11:40:23Z" duration-ms="6420">
     <groups>
     </groups>
-    <test started-at="2022-03-31T15:53:22Z" name="Default test" finished-at="2022-03-31T15:53:33Z" duration-ms="11494">
+    <test started-at="2022-04-04T11:40:16Z" name="Default test" finished-at="2022-04-04T11:40:23Z" duration-ms="6420">
       <class name="com.hybrid.Testcases.LoginTestCRM">
-        <test-method is-config="true" signature="SetupSuit()[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-03-31T15:53:21Z" name="SetupSuit" finished-at="2022-03-31T15:53:22Z" duration-ms="619" status="PASS">
+        <test-method is-config="true" signature="SetupSuit()[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-04-04T11:40:15Z" name="SetupSuit" finished-at="2022-04-04T11:40:16Z" duration-ms="684" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Settingup the Browser]]>
+            </line>
+            <line>
+              <![CDATA[Settingup  completed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- SetupSuit -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-03-31T15:53:22Z" name="setup" finished-at="2022-03-31T15:53:26Z" duration-ms="4439" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-04-04T11:40:16Z" name="setup" finished-at="2022-04-04T11:40:20Z" duration-ms="3378" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Browser initiated]]>
+            </line>
+            <line>
+              <![CDATA[Browser initiated]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginApp()[pri:1, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-03-31T15:53:26Z" name="LoginApp" finished-at="2022-03-31T15:53:33Z" duration-ms="6309" status="PASS">
+        <test-method signature="LoginApp()[pri:1, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-04-04T11:40:20Z" name="LoginApp" finished-at="2022-04-04T11:40:21Z" duration-ms="1166" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[user login failed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- LoginApp -->
-        <test-method is-config="true" signature="teardownMethod(org.testng.ITestResult)[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-03-31T15:53:33Z" name="teardownMethod" finished-at="2022-03-31T15:53:33Z" duration-ms="380" status="PASS">
+        <test-method is-config="true" signature="teardownMethod(org.testng.ITestResult)[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-04-04T11:40:21Z" name="teardownMethod" finished-at="2022-04-04T11:40:22Z" duration-ms="1600" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LoginApp status=SUCCESS method=LoginTestCRM.LoginApp()[pri:1, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b] output={null}]]]>
+                <![CDATA[[TestResult name=LoginApp status=SUCCESS method=LoginTestCRM.LoginApp()[pri:1, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b] output=user login failed]]]>
               </value>
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Screenshot taken and attached to the report]]>
+            </line>
           </reporter-output>
         </test-method> <!-- teardownMethod -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-03-31T15:53:33Z" name="teardown" finished-at="2022-03-31T15:53:33Z" duration-ms="347" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.hybrid.Testcases.LoginTestCRM@d278d2b]" started-at="2022-04-04T11:40:22Z" name="teardown" finished-at="2022-04-04T11:40:23Z" duration-ms="244" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Browser Closed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.hybrid.Testcases.LoginTestCRM -->
