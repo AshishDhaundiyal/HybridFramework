@@ -48,13 +48,13 @@ public class BaseClass {
 		Reporter.log("Settingup  completed", true);
 	}
 
-	@Parameters({"browser","appUrl"})
+	@Parameters({"appUrl","browser"})
 	@BeforeClass
-	public void setup(String browser, String url) {
+	public void setup(String appUrl, String browser) {
 		Reporter.log("Browser initiated", true);
 		//driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.geturl());
 		
-		driver = BrowserFactory.startApplication(driver, browser, url);
+		driver = BrowserFactory.startApplication(driver, browser, appUrl);
 		Reporter.log("Browser initiated", true);
 	}
 

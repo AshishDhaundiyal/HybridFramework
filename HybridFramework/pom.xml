@@ -56,7 +56,7 @@
 				<version>3.0.0-M6</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>XmlFiles/${xmlFiles}</suiteXmlFile>
+						<suiteXmlFile>XmlFiles/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					
 					<systemPropertyVariables>
